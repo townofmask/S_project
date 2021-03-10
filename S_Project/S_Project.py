@@ -17,13 +17,14 @@ book = openpyxl.Workbook()
 sheet = book.active
 sheet["A1"] = text 
 
-i = 17
+i = 0
 textarea.send_keys(i)
 res = driver.find_element_by_id("result")
 output = res.text
 sheet["A2"] = str(i)
 sheet["B2"] = ">>>"
 sheet["C2"] = output
+driver.find_element_by_css_selector(".row>.form-control").clear()
 
 for i in range(101):
     textarea.send_keys(i)
