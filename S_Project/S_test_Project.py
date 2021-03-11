@@ -21,7 +21,7 @@ def test_text2():
     res = driver.find_element_by_id("result")
     output = res.text
     assert output == "0% chance of a shared birthday", \
-        f"Wrong text!"
+        f"Wrong!"
 
 if __name__ == "__main__":
     test_text()
